@@ -45,7 +45,7 @@ def pattern(n):
             # printing star
             print("* ", end="")
         print()
-# takeing input
+# taking input
 n = int(input('Enter the number of rows: '))
 # calling function
 pattern(n)
