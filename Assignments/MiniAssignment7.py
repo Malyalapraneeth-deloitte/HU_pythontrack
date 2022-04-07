@@ -8,14 +8,15 @@ for word in sentence:
         longest_word = word
 print(longest_word)
 
-#Error handling code
+
+
+#Error handling code(Caluclator)
 class FormulaError(Exception):
     def __init__(self, data):
         self.data = data
 
     def __str__(self):
         return repr(self.data)
-
 
 def error():
     while True:
@@ -26,8 +27,11 @@ def error():
             try:
                 if length != 3:
                     raise FormulaError("String should contain 3 elements")
-                elif lst[1] != '+' or lst[1] != '-':
-                    raise FormulaError("String should contain '+' or '-' symbol")
+                elif lst[1] not in ('+', '-'):
+                    raise FormulaError("given input contain + or - symbol")
+                else:
+                    lst[0] = float(lst[0])
+                    lst[2] = float(lst[2])
             except FormulaError as e:
                 print("formula error", e.data)
             except ValueError:
@@ -39,4 +43,3 @@ def error():
             break
 
 error()
-
