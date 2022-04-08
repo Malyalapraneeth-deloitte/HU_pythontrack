@@ -4,7 +4,7 @@ import openpyxl
 class Excel:
     @staticmethod
     def writeExcel(lst):
-        path = "C:\Users\malpraneeth\Documents\BMSDetails .xlsx"
+        path = "\\Users\\malpraneeth\\Documents\\BMSDetails.xlsx"
         wb = openpyxl.load_workbook(path)
         sh1 = wb['Sheet1']
         r = sh1.max_row
@@ -12,12 +12,12 @@ class Excel:
         for j in range(1,c+1):
             sh1.cell(r+1,j).value = lst[j-1]
 
-        path1="C:\Users\malpraneeth\Documents\BMSDetails .xlsx"
+        path1="\\Users\\malpraneeth\\Documents\\BMSDetails.xlsx"
         wb.save(path1)
 
     @staticmethod
     def editExcel():
-        path = "C:\Users\malpraneeth\Documents\BMSDetails .xlsx"
+        path = "\\Users\\malpraneeth\\Documents\\BMSDetails.xlsx"
         wb = openpyxl.load_workbook(path)
         sh1 = wb['Sheet1']
         r = sh1.max_row
@@ -43,7 +43,7 @@ class Excel:
 
     @staticmethod
     def delExcel():
-        path = "C:\Users\malpraneeth\Documents\BMSDetails .xlsx"
+        path = "\\Users\\malpraneeth\\Documents\\BMSDetails.xlsx"
         wb = openpyxl.load_workbook(path)
         sh1 = wb['Sheet1']
         r = sh1.max_row
