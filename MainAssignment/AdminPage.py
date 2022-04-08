@@ -1,5 +1,5 @@
 from ReadingExcel import Excel
-from Assignments import TimeCaluclation
+from MainAssignment import TimeCaluclation
 
 
 class Admin(Excel):
