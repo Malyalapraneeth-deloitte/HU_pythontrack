@@ -11,7 +11,7 @@ class Register:
         self.lst_details =[self.name, self.email, self.phone, self.age, self.password]
 
     def user_register(self):
-        path = "\\Users\\amanikanth\\PycharmProjects\\pythonTrack\\main_assignment\\excelfiles\\movieDetails.xlsx"
+        path = "C:\Users\malpraneeth\Documents\BMSDetails .xlsx"
         wb = openpyxl.load_workbook(path)
         sh2 = wb['Sheet2']
         r = sh2.max_row
@@ -22,7 +22,7 @@ class Register:
         wb.save(path)
 
     def checkUser(self,name):
-        path = "\\Users\\amanikanth\\PycharmProjects\\pythonTrack\\main_assignment\\excelfiles\\movieDetails.xlsx"
+        path = "C:\Users\malpraneeth\Documents\BMSDetails .xlsx"
         wb = openpyxl.load_workbook(path)
         sh2 = wb['Sheet2']
         r = sh2.max_row
