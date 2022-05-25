@@ -10,7 +10,7 @@ class Register:
         self.password = password
         self.lst_details =[self.name, self.email, self.phone, self.age, self.password]
 
-    def user_register(self):
+    def Add_user_register(self):
         path = "\\Users\\malpraneeth\\Documents\\BMSDetails.xlsx"
         wb = openpyxl.load_workbook(path)
         sh2 = wb['Sheet2']
@@ -21,7 +21,7 @@ class Register:
             sh2.cell(row,col).value = self.lst_details[col-1]
         wb.save(path)
 
-    def checkUser(self,name):
+    def check_duplicate_Register(self,name):
         path = "\\Users\\malpraneeth\\Documents\\BMSDetails.xlsx"
         wb = openpyxl.load_workbook(path)
         sh2 = wb['Sheet2']
@@ -35,7 +35,7 @@ class Register:
                 break
         else:
             wb.save(path)
-            self.user_register()
+            self.Add_user_register()
 
 
 def userRegister():
@@ -45,4 +45,4 @@ def userRegister():
     age = input("enter age: ")
     password = input("enter password: ")
     reg = Register(name, email, phone, age, password)
-    reg.checkUser(name)
+    reg.check_duplicate_Register(name)
